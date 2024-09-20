@@ -56,5 +56,5 @@ Ausserdem werden mit dem Befehl auch diese wichtigen Pakete im package.json inst
 
 ## Links
 
-[Git Repository](https://github.com/bretscherjan/docker-nodejs-sample)
+[Git Repository](https://github.com/bretscherjan/docker-nodejs-sample)<br>
 [Docker Anleitung](https://docs.docker.com/guides/language/nodejs/containerize/)
