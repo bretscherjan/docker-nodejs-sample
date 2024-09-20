@@ -1,65 +1,60 @@
-<!--
-# **Thema:** Erstellen einer ToDo-Applikation mit Markdown, Git, GitHub und Docker
-
-In dieser Abschlussaufgabe werden alle erlernten Fähigkeiten in den Bereichen **Markdown**, **Git**, **GitHub** und **Docker** kombiniert. Die Aufgabe besteht darin, eine ToDo-Applikation zu erstellen und diese in einem Docker-Container bereitzustellen.
-
-### **Aufgabenstellung:**
-
-1. **GitHub-Fork erstellen:**
-   - Erstelle einen **Fork** des folgenden GitHub-Repositories: [docker-nodejs-sample](https://github.com/ICT-BLJ/docker-nodejs-sample).
-   - Clone deinen Fork lokal auf deinen Computer.
-
-2. **Erstellen einer README-Datei in Markdown:**
-   - Erstelle eine **README.md** Datei im Root-Verzeichnis des Projekts.
-   - Die README soll alle Schritte zur **Installation des Projekts** enthalten. Dazu gehören:
-     - Klonen des Repositories
-     - Installation der notwendigen Pakete
-     - Docker-Konfiguration und -Installation
-     - Starten der Applikation in einem Docker-Container
-   - Nutze [Markdown](https://www.markdownguide.org/cheat-sheet/) für die Struktur und Formatierung der Datei.
-
-3. **Dokumentation der Vorgehensweise:**
-   - Verfasse eine vollständige **Dokumentation in Word**, in der die Arbeitsschritte beschrieben werden. Diese Schritte sind:
-     - Klonen des Repositories
-     - Einrichtung der Entwicklungsumgebung
-     - Erstellung der README.md
-     - Verwendung von Git (Commit, Push)
-     - Erstellung und Nutzung von Docker-Containern
-   - Verwende die während des Office-Kurses erarbeiteten Kenntnisse für das Erstellen dieses Dokuments.
-
-4. **Dockerize das Node.js-Projekt:**
-   - Verfolge die Anleitung unter [docs.docker.com](https://docs.docker.com/guides/language/nodejs/containerize/) ab dem Schritt **"Initialize Docker inits"**.
-   - Dein Ziel ist es, das Projekt in einem Docker-Container lauffähig zu machen, sodass am Ende eine **ToDo-Applikation** in einem Docker-Container bereitsteht.
-
-5. **Git-Workflows:**
-   - Arbeite mit **Git**, um Änderungen regelmäßig zu committen und auf GitHub zu pushen.
-   - Verwende sinnvolle Commit-Nachrichten, um deinen Fortschritt zu dokumentieren.
-   - Stelle sicher, dass dein finaler Stand auf GitHub vorhanden ist.
-
-6. **Abgabe:**
-   - **Dokumentation:** Lade die erstellte Word-Dokumentation (inkl. Screenshots und Beschreibung der Schritte) in dein Repository hoch.
-   - **GitHub-Link:** Stelle den Link zu deinem GitHub-Repository bereit, das den finalen Stand des Projekts enthält.
-
-### **Ziele der Aufgabe:**
-- Anwendung und Vertiefung von Git und GitHub.
-- Verfassen einer strukturierten Anleitung mit Markdown.
-- Containerisieren einer Node.js-Anwendung mit Docker.
-- Dokumentation des gesamten Prozesses in einem Word-Dokument.
-
--->
-
-
-# Installation des Projektes (ToDo-Application)
+# ToDo-Application mit Git, Docker und node.js 🐋
 
 <br>
 
+## Projektbeschreibung
+
+In diesem Projekt wird mit node.js eine Programm ausgeführt, mit dem man eine ToDo-Liste erstellen kann und die Inhalte abkreuzen, die man bereits erledigt hat.
+
 ### Repository Clone
 
-SSH Link aus GitHub kopieren<br>
-Kommandozeile öffnen (cmd)<br>
-Aufs Verzeichnis mit dem richtigen Ordner Navigieren(C:\Daten\020_ZLI\010_projects\010_ToDoApplication)<br>
-Mit befehl ```git clone ssh://username@host.xz/absolute/path/to/repo.git/``` Clone auf lokalen Rechner
+- SSH Link aus GitHub kopieren
+
+- Kommandozeile öffnen (cmd)
+
+- Aufs Verzeichnis mit dem richtigen Ordner Navigieren(C:\Daten\020_ZLI\010_projects\010_ToDoApplication) mit ```cd Path/docker-nodejs-sample```
+
+- Mit befehl ```git clone ssh://username@host.xz/absolute/path/to/repo.git/``` Clone auf lokalen Rechner
+
+### Docker-Konfiguration & -Installation
+
+- Dockerdesktop-Installation für Intel (Docker Desktop for Windows - x86_64)
+
+- Docker init in richtigem Verzeichnis in der cmd ausführen ```docker init```
+
+- Fragen werden dargestellt wie unten. Mit den Angaben von unten ausfüllen:
+```
+? What application platform does your project use? Node
+? What version of Node do you want to use? 18.0.0
+? Which package manager do you want to use? npm
+? What command do you want to use to start the app: node src/index.js
+? What port does your server listen on? 3000
+```
+
+- ```docker compose up --build``` führt die Installation aus.
 
 ### Notwendige Pakete Installieren
-### Docker-Konfiguration & -Installation
+
+Mit dem Befehl ```docker init``` werden automatisch diese Dateien installiert:
+- `dockerignore`
+- `Dockerfile`
+- `compose.yaml`
+- `README.Docker.md`
+
+Ausserdem werden mit dem Befehl auch diese wichtigen Pakete im package.json installiert:
+
+- `express`
+- `pg`
+- `sqlite3` (Version 5.0.0 ältere Version als defauld, sonst funktioniert nicht)
+- `uuid`
+- `wait-port`
+
 ### Application in Dockerconatainer Starten
+
+- mit der Adresse [localhost:3000](http://localhost:3000/) kann man die Anwendung starten
+<img src="images/Screenshot 2024-09-20 112934.png" alt="ToDo-Liste" width="550"/>
+
+## Links
+
+[Git Repository](https://github.com/bretscherjan/docker-nodejs-sample)
+[Docker Anleitung](https://docs.docker.com/guides/language/nodejs/containerize/)
