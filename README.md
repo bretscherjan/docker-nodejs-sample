@@ -1,3 +1,4 @@
+<!--
 # **Thema:** Erstellen einer ToDo-Applikation mit Markdown, Git, GitHub und Docker
 
 In dieser Abschlussaufgabe werden alle erlernten Fähigkeiten in den Bereichen **Markdown**, **Git**, **GitHub** und **Docker** kombiniert. Die Aufgabe besteht darin, eine ToDo-Applikation zu erstellen und diese in einem Docker-Container bereitzustellen.
@@ -44,5 +45,21 @@ In dieser Abschlussaufgabe werden alle erlernten Fähigkeiten in den Bereichen *
 - Verfassen einer strukturierten Anleitung mit Markdown.
 - Containerisieren einer Node.js-Anwendung mit Docker.
 - Dokumentation des gesamten Prozesses in einem Word-Dokument.
-  
-Viel Erfolg bei der Umsetzung!
+
+-->
+
+
+# Installation des Projektes (ToDo-Application)
+
+<br>
+
+### Repository Clone
+
+SSH Link aus GitHub kopieren<br>
+Kommandozeile öffnen (cmd)<br>
+Aufs Verzeichnis mit dem richtigen Ordner Navigieren(C:\Daten\020_ZLI\010_projects\010_ToDoApplication)<br>
+Mit befehl ```git clone ssh://username@host.xz/absolute/path/to/repo.git/``` Clone auf lokalen Rechner
+
+### Notwendige Pakete Installieren
+### Docker-Konfiguration & -Installation
+### Application in Dockerconatainer Starten
